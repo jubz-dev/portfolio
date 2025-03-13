@@ -223,6 +223,32 @@
   </form>
 </section>
 
+<!-- footer -->
+<footer class="max-w-7xl mx-auto px-5 my-12 pt-7">
+    <div class="text-white flex flex-col md:flex-row justify-between md:items-center gap-3 md:gap-12">
+        <div class="md:w-1/3">
+          <a href="/" class="text-white font-bold font-medium text-lg flex items-center gap-3"><div data-initials="JS">PORTFOLIO</div></a>
+          <h1 class="font-bold text-2xl tracking-[3.22px]">Jubail Salamida</h1>
+          <p class="text-1xl mb-5">
+            Back-End Software Engineer
+          </p>
+        </div>
+        <div class="md:w-1/3 md:pl-10">
+          <h5 class="mb-3">Links</h5>
+          <a href="#home" class="block my-2 text-sm text-slate-300 hover:text-primary">Home</a>
+          <a href="#skills" class="block my-2 text-sm text-slate-300 hover:text-primary">Skills</a>
+          <a href="#resume" class="block my-2 text-sm text-slate-300 hover:text-primary">Resume</a>
+          <a href="#message" class="block my-2 text-sm text-slate-300 hover:text-primary">Message</a>
+        </div>
+        <div class="md:w-1/3 md:pl-10 mb-7">
+          <h5 class="mb-3">Contact</h5>
+          <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" target="_blank" class="block my-2 text-sm text-slate-300 hover:text-primary">linkedIn</a>
+          <a href="tel:+639953389390" class="block my-2 text-sm text-slate-300 hover:text-primary">(+639) 995-338-9390</a>
+          <a href="mailto:rjmsalamida@gmail.com" class="block my-2 text-sm text-slate-300 hover:text-primary">rjmsalamida@gmail.com</a>
+        </div>
+    </div>
+</footer>
+
 <!-- script tags -->
 <script src="src/app.js"></script>
 </body>
