@@ -72,6 +72,50 @@
     </div>
 </section>
 
+<!-- skills section -->
+<section class="px-5 my-16 mx-auto max-w-7xl text-white" id="skills">
+    <div class="h-8 md:hidden"></div>
+    <div class="text-center">
+      <h3 class="text-3xl font-bold mb-5">
+          My <span class="text-primary">Skills</span>
+      </h3>
+    </div>
+    <!-- skills cards -->
+    <div class="my-6 grid-cols-2 gap-8 grid lg:grid-cols-4 lg:gap-12 md:grid-cols-4 md:gap-12 justify-around items-center">
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl group relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="php-container">
+          <img src="src/icons/skills/php-default.png" alt="Default" class="w-[196px] mx-auto group-hover:hidden hidden" id="php-default"/>
+          <img src="src/icons/skills/php.png" alt="Hover" class="w-[196px] mx-auto group-hover:block hidden" id="php-hover"/>
+        </div>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl group relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="sql-container">
+          <img src="src/icons/skills/sql-default.png" alt="Default" class="w-[196px] mx-auto group-hover:hidden hidden" id="sql-default"/>
+          <img src="src/icons/skills/sql.png" alt="Hover" class="w-[196px] mx-auto group-hover:block hidden" id="sql-hover"/>
+        </div>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl group relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="redis-container">
+          <img src="src/icons/skills/redis-default.png" alt="Default" class="w-[196px] mx-auto group-hover:hidden hidden" id="redis-default"/>
+          <img src="src/icons/skills/redis.png" alt="Hover" class="w-[196px] mx-auto group-hover:block hidden" id="redis-hover"/>
+        </div>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl group relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="git-container">
+            <img src="src/icons/skills/git-default.png" alt="Default" class="w-[196px] mx-auto group-hover:hidden hidden" id="git-default"/>
+            <img src="src/icons/skills/git.png" alt="Hover" class="w-[196px] mx-auto group-hover:block hidden" id="git-hover"/>
+        </div>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl group relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="wordpress-container">
+            <img src="src/icons/skills/wordpress-default.png" alt="" class="w-[196px] mx-auto group-hover:hidden hidden" id="wordpress-default"/>
+            <img src="src/icons/skills/wordpress.png" alt="Hover" class="w-[196px] mx-auto group-hover:block hidden" id="wordpress-hover"/>
+        </div>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl group relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="html5-container">
+            <img src="src/icons/skills/html5-default.png" alt="Default" class="w-[196px] mx-auto group-hover:hidden hidden" id="html5-default"/>
+            <img src="src/icons/skills/html5.png" alt="Hover" class="w-[196px] mx-auto group-hover:block hidden" id="html5-hover"/>
+        </div>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl group relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="css3-container">
+            <img src="src/icons/skills/css3-default.png" alt="Default" class="w-[196px] mx-auto group-hover:hidden hidden" id="css3-default"/>
+            <img src="src/icons/skills/css3.png" alt="Hover" class="w-[196px] mx-auto group-hover:block hidden" id="css3-hover"/>
+        </div>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl group relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="javascript-container">
+            <img src="src/icons/skills/javascript-default.png" alt="Default" class="w-[196px] mx-auto group-hover:hidden hidden" id="javascript-default"/>
+            <img src="src/icons/skills/javascript.png" alt="Hover" class="w-[196px] mx-auto group-hover:block hidden" id="javascript-hover"/>
+        </div>
+    </div>
+</section>
 
 <!-- script tags -->
 <script src="src/app.js"></script>

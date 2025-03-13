@@ -18,6 +18,102 @@ window.addEventListener("scroll", function () {
       }
 });
 
+// Implements Lazy Loading for the skills section
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsContainer = document.getElementById("skills");
+  if (!skillsContainer) return;
+
+  const skillElements = skillsContainer.querySelectorAll('[id$="-container"]');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("h-0", "opacity-0", "scale-95");
+        entry.target.classList.add("h-auto", "opacity-100", "scale-100");
+        console.log(entry.target);
+        loadImage(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  skillElements.forEach(container => {
+    observer.observe(container);
+    setupHoverEffect(container);
+  });
+
+  function loadImage(container) {
+    const skill = container.id.replace("-container", "");
+    const image = document.getElementById(`${skill}-default`);
+
+    container.style.pointerEvents = "none";
+    image.classList.remove("hidden");
+
+    const imageComputedStyle = window.getComputedStyle(image);
+    const containerComputedStyle = window.getComputedStyle(container);
+
+    let imageHeight = image.offsetHeight;
+    if (!imageHeight) {
+      imageHeight = parseInt(imageComputedStyle.height) || 196;
+    }
+
+    const paddingTop = parseInt(containerComputedStyle.paddingTop) || 0;
+    const paddingBottom = parseInt(containerComputedStyle.paddingBottom) || 0;
+    const totalHeight = imageHeight + paddingTop + paddingBottom + 2;
+
+    image.classList.add("hidden");
+    container.style.height = `${totalHeight}px`;
+
+    const loader = document.createElement("div");
+    loader.className = "absolute w-full flex justify-center items-center";
+    loader.style.height = `${totalHeight}px`;
+
+    loader.innerHTML = `
+      <div class="flex space-x-2">
+        <span class="sr-only">Loading...</span>
+        <div class="h-3 w-3 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+        <div class="h-3 w-3 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+        <div class="h-3 w-3 bg-primary rounded-full animate-bounce"></div>
+      </div>
+    `;
+
+    container.appendChild(loader);
+
+    if (image) {
+      const srcValue = image.getAttribute("src");
+      if (!srcValue || srcValue.trim() === "") {
+        container.style.pointerEvents = "none";
+        return;
+      }
+    }
+
+    setTimeout(() => {
+      loader.remove();
+      image.classList.remove("hidden");
+      container.style.height = "auto";
+      container.style.pointerEvents = "auto";
+    }, 1000);
+  }
+
+  function setupHoverEffect(container) {
+    const skill = container.id.replace("-container", "");
+    const defaultImg = document.getElementById(`${skill}-default`);
+    const hoverImg = document.getElementById(`${skill}-hover`);
+
+    if (!defaultImg || !hoverImg) return;
+
+    container.addEventListener("mouseenter", () => {
+      defaultImg.classList.add("hidden");
+      hoverImg.classList.remove("hidden");
+    });
+
+    container.addEventListener("mouseleave", () => {
+      hoverImg.classList.add("hidden");
+      defaultImg.classList.remove("hidden");
+    });
+  }
+});
+
 // Smooth scroll for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
