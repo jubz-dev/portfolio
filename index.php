@@ -138,6 +138,91 @@
     </div>
 </section>
 
+<!-- message section -->
+<section class="my-16 max-w-7xl mx-auto px-5" id="message">
+  <div class="h-8 md:hidden"></div>
+  <div class="text-center text-white">
+    <h3 class="text-3xl font-bold mb-5">
+        <span class="text-primary">Message</span> Me
+    </h3>
+    <p class="text-2xl text-center text-white font-medium mb-4">
+      Looking forward to hearing from you!
+    </p>
+  </div>
+  <form>
+    <div class="container mx-auto">
+      <div class="mx-auto md:w-2/3">
+        <!-- success message -->
+        <div class="mb-7 p-4 border-l-4 border-primary -6 rounded border-green-800; bg-green-800 bg-opacity-40">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <div class="text-sm text-primary">
+                <p>Your message has been sent successfully!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- failed message -->
+        <div class="mb-7 p-4 border-l-4 border-red-500 -6 rounded border-gray-700 bg-white bg-opacity-40">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-red-500 stroke-current" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 8V12V8ZM12 16H12.01H12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <div class="text-sm text-red-500">
+                <p>Failed to send your message. Please try again later.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="-m-2 flex flex-wrap">
+            <div class="w-full md:w-1/2 p-2">
+              <div class="relative">
+                <input type="text" id="name" name="name" 
+                  class="peer w-full rounded border border-primary bg-background bg-opacity-40 py-3 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-primary-500 focus:bg-background focus:ring-2 focus:ring-primary-900" 
+                  placeholder="Name" required />
+                <label for="name" 
+                  class="absolute left-3 -top-4 pt-1 px-2 bg-background text-sm leading-6 text-primary transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:pl-[0] peer-placeholder-shown:top-3 peer-placeholder-shown:bg-background peer-placeholder-shown:text-white peer-focus:pl-[9px] peer-focus:left-3 peer-focus:-top-4 peer-focus:text-sm peer-focus:px-2 peer-focus:bg-background peer-focus:text-white inline-block">
+                  Name
+                </label>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-2">
+              <div class="relative">
+                <input type="email" id="email" name="email"
+                  class="peer w-full rounded border border-primary bg-background bg-opacity-40 py-3 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-primary-500 focus:bg-background focus:ring-2 focus:ring-primary-900" 
+                  placeholder="Email" required />
+                <label for="email"
+                  class="absolute left-3 -top-4 pt-1 px-2 bg-background text-sm leading-6 text-primary transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:pl-[0] peer-placeholder-shown:top-3 peer-placeholder-shown:bg-background peer-placeholder-shown:text-white peer-focus:pl-[9px] peer-focus:left-3 peer-focus:-top-4 peer-focus:text-sm peer-focus:px-2 peer-focus:bg-background peer-focus:text-white inline-block">
+                  Email
+                </label>
+              </div>
+            </div>
+            <div class="w-full p-2">
+              <div class="relative">
+                <textarea id="message" name="message" class="peer h-32 w-full resize-none rounded border border-primary bg-background bg-opacity-40 py-3 px-3 text-base leading-6 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-primary-500 focus:bg-background focus:ring-2 focus:ring-primary-900" placeholder="Message" required></textarea>
+                <label for="message" class="absolute left-3 -top-4 pt-1 px-2 bg-background text-sm leading-6 text-primary transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:pl-[0] peer-placeholder-shown:top-3 peer-placeholder-shown:bg-background peer-placeholder-shown:text-white peer-focus:pl-[9px] peer-focus:left-3 peer-focus:-top-4 peer-focus:text-sm peer-focus:px-2 peer-focus:bg-background peer-focus:text-white inline-block">
+                  Message
+                </label>
+              </div>
+            </div>
+            <div class="w-full p-2">
+              <button class="w-full flex items-center justify-center px-8 py-3 border border-transparent font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10 cursor-pointer"><i class="bx bxs-paper-plane text-3xl pr-1"></i>Send</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
 <!-- script tags -->
 <script src="src/app.js"></script>
 </body>
