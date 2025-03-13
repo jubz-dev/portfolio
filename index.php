@@ -117,6 +117,27 @@
     </div>
 </section>
 
+<!-- resume section -->
+<section class="px-5 my-32 mx-auto max-w-7xl" id="resume">
+    <div class="h-8 md:hidden"></div>
+    <div class="text-white">
+        <h3 class="text-3xl font-bold mb-5 text-center">
+            My <span class="text-primary">Resume</span>
+        </h3>
+        <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl max-w-4xl mx-auto py-10 px-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-4xl">
+                <span class="block text-2xl font-medium mb-4 text-white">Let’s connect!</span>
+                <span class="block bg-primary bg-clip-text text-transparent">Grab my resume here</span>
+            </h2>
+            <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
+                <a href="" target="_blank"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10"><i class="bx bxs-download text-3xl pr-1 animate-bounce"></i>Download
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- script tags -->
 <script src="src/app.js"></script>
 </body>
