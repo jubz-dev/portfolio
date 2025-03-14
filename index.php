@@ -25,20 +25,20 @@
           <!-- menu btn, only disply on mobile -->
           <div class="md:hidden">
             <button id="mobile-menu-button" class="text-white text-2xl cursor-pointer">
-              <span class="toggle block"><i class="bx bx-menu text-3xl"></i></span>
-              <span class="toggle hidden"><i class="bx bx-x text-3xl"></i></span>
+              <span class="toggle block"><i class="bx bx-menu text-5xl"></i></span>
+              <span class="toggle hidden"><i class="bx bx-x text-5xl"></i></span>
             </button>
           </div>
       </div>
     </nav>
 
     <!-- mobile menu -->
-    <nav class="bg-green-900">
-      <div id="mobile-menu" class="toggle hidden md:hidden p-2 px-5">
-          <a href="#home" class="block text-white py-2 mt-3 hover:bg-green-800">Home</a>
-          <a href="#skills" class="block text-white py-2 hover:bg-green-800">Skills</a>
-          <a href="#resume" class="block text-white py-2 hover:bg-green-800">Resume</a>
-          <a href="#message" class="block text-white py-2 hover:bg-green-800">Message</a>
+    <nav class="absolute bg-green-900 w-full opacity-90">
+      <div id="mobile-menu" class="toggle hidden md:hidden p-5">
+          <a href="#home" class="block text-white p-2 mt-3 hover:bg-green-800">Home</a>
+          <a href="#skills" class="block text-white p-2 hover:bg-green-800">Skills</a>
+          <a href="#resume" class="block text-white p-2 hover:bg-green-800">Resume</a>
+          <a href="#message" class="block text-white p-2 hover:bg-green-800">Message</a>
       </div>
     </nav>
 </header>
