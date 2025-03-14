@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   skillElements.forEach(container => {
     observer.observe(container);
-    setupHoverEffect(container);
   });
 
   function loadImage(container) {
@@ -93,24 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
       container.style.height = "auto";
       container.style.pointerEvents = "auto";
     }, 1000);
-  }
-
-  function setupHoverEffect(container) {
-    const skill = container.id.replace("-container", "");
-    const defaultImg = document.getElementById(`${skill}-default`);
-    const hoverImg = document.getElementById(`${skill}-hover`);
-
-    if (!defaultImg || !hoverImg) return;
-
-    container.addEventListener("mouseenter", () => {
-      defaultImg.classList.add("hidden");
-      hoverImg.classList.remove("hidden");
-    });
-
-    container.addEventListener("mouseleave", () => {
-      hoverImg.classList.add("hidden");
-      defaultImg.classList.remove("hidden");
-    });
   }
 });
 
