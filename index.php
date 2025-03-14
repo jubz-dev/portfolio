@@ -60,9 +60,15 @@
           <a href="#message"><button class="flex items-center justify-center px-10 py-4 border border-transparent font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer"><i class="bx bxs-chevrons-down text-3xl text-secondar pr-1"></i>Let's Talk</button></a>
           <div class="mt-9 mb-8 flex gap-4 items-center">
             <div class="flex space-x-3">
-                <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" target="_blank"><img src="src/icons/linkedIn.png" alt="" class="w-8 h-8"/></a>
-                <a href="tel:+639953389390"><img src="src/icons/mobile.png" alt="" class="w-8 h-8"/></a>
-                <a href="mailto:rjmsalamida@gmail.com"><img src="src/icons/email.png" alt="" class="w-8 h-8"/></a>
+              <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" target="_blank" class="inline-flex items-center justify-center border bg-secondary border-secondary hover:border-green-700 hover:bg-green-700 text-white rounded-full mr-2">
+                <i class="bx bxl-linkedin text-2xl p-2"></i>
+              </a>
+              <a href="tel:+639953389390" class="inline-flex items-center justify-center border bg-secondary border-secondary hover:border-green-700 hover:bg-green-700 text-white rounded-full mr-2">
+                <i class="bx bx-mobile text-2xl p-2"></i>
+              </a>
+              <a href="mailto:rjmsalamida@gmail.com" class="inline-flex items-center justify-center border bg-secondary border-secondary hover:border-green-700 hover:bg-green-700 text-white rounded-full">
+                <i class="bx bx-envelope text-2xl p-2"></i>
+              </a>
             </div>
           </div>
       </div>
@@ -241,14 +247,15 @@
           <div>
             <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-secondary">Connect With Me</h2>
           </div>
-          <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" class="inline-flex items-center justify-center">
-            <img src="src/icons/linkedIn.png" alt="LinkedIn" class="w-8 h-8"/>
+
+          <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" target="_blank" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full mr-1">
+            <i class="bx bxl-linkedin text-2xl p-2"></i>
           </a>
-          <a href="tel:+639953389390" class="inline-flex items-center justify-center">
-            <img src="src/icons/mobile.png" alt="Mobile" class="w-8 h-8"/>
+          <a href="tel:+639953389390" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full mr-1">
+            <i class="bx bx-mobile text-2xl p-2"></i>
           </a>
-          <a href="mailto:rjmsalamida@gmail.com" class="inline-flex items-center justify-center">
-            <img src="src/icons/email.png" alt="Email" class="w-8 h-8"/>
+          <a href="mailto:rjmsalamida@gmail.com" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full">
+            <i class="bx bx-envelope text-2xl p-2"></i>
           </a>
         </div>
       </div>
