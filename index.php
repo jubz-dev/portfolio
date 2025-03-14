@@ -133,7 +133,7 @@
                 <span class="block bg-primary bg-clip-text text-transparent">Grab my resume here</span>
             </h2>
             <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-                <a href="" target="_blank"
+                <a href="/src/app/download.php"
                     class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10"><i class="bx bxs-download text-3xl pr-1 animate-bounce"></i>Download
                 </a>
             </div>
