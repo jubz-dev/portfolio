@@ -216,29 +216,53 @@
 </section>
 
 <!-- footer -->
-<footer class="max-w-7xl mx-auto px-5 my-12 pt-7">
-    <div class="text-white flex flex-col md:flex-row justify-between md:items-center gap-3 md:gap-12">
-        <div class="md:w-1/3">
+<footer>
+  <div class="mt-28 max-w-7xl mx-auto pt-7 text-white px-5">
+      <div class="flex flex-wrap justify-between">
+        <div class="my-4 w-full md:w-1/3">
           <a href="/" class="text-white font-bold font-medium text-lg flex items-center gap-3"><div data-initials="JS">PORTFOLIO</div></a>
-          <h1 class="font-bold text-2xl tracking-[3.22px]">Jubail Salamida</h1>
-          <p class="text-1xl mb-5">
-            Back-End Software Engineer
+          <h1 class="font-bold text-2xl tracking-[3.22px] py-2">Jubail Salamida</h1>
+          <p class="text-1xl">
+              Back-End Software Engineer
           </p>
         </div>
-        <div class="md:w-1/3 md:pl-10">
-          <h5 class="mb-3">Links</h5>
-          <a href="#home" class="block my-2 text-sm text-slate-300 hover:text-primary">Home</a>
-          <a href="#skills" class="block my-2 text-sm text-slate-300 hover:text-primary">Skills</a>
-          <a href="#resume" class="block my-2 text-sm text-slate-300 hover:text-primary">Resume</a>
-          <a href="#message" class="block my-2 text-sm text-slate-300 hover:text-primary">Message</a>
+        <div class="my-4 w-full sm:w-auto md:w-1/3 md:pl-25">
+          <div>
+            <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-secondary">Links</h2>
+          </div>
+          <ul class="leading-8">
+            <li><a href="#home" class="block text-slate-300 hover:text-primary">Home</a></li>
+            <li><a href="#skills" class="block text-slate-300 hover:text-primary">Skills</a></li>
+            <li><a href="#resume" class="block text-slate-300 hover:text-primary">Resume</a></li>
+            <li><a href="#message" class="block text-slate-300 hover:text-primary">Message</a></li>
+          </ul>
         </div>
-        <div class="md:w-1/3 md:pl-10 mb-7">
-          <h5 class="mb-3">Contact</h5>
-          <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" target="_blank" class="block my-2 text-sm text-slate-300 hover:text-primary">linkedIn</a>
-          <a href="tel:+639953389390" class="block my-2 text-sm text-slate-300 hover:text-primary">(+639) 995-338-9390</a>
-          <a href="mailto:rjmsalamida@gmail.com" class="block my-2 text-sm text-slate-300 hover:text-primary">rjmsalamida@gmail.com</a>
+        <div class="my-4 w-full sm:w-auto md:w-1/3 md:pl-25">
+          <div>
+            <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-secondary">Connect With Me</h2>
+          </div>
+          <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" class="inline-flex items-center justify-center">
+            <img src="src/icons/linkedIn.png" alt="LinkedIn" class="w-8 h-8"/>
+          </a>
+          <a href="tel:+639953389390" class="inline-flex items-center justify-center">
+            <img src="src/icons/mobile.png" alt="Mobile" class="w-8 h-8"/>
+          </a>
+          <a href="mailto:rjmsalamida@gmail.com" class="inline-flex items-center justify-center">
+            <img src="src/icons/email.png" alt="Email" class="w-8 h-8"/>
+          </a>
         </div>
-    </div>
+      </div>
+  </div>
+  <div class="py-4 text-gray-300 max-w-7xl mx-auto px-5">
+      <div class="flex flex-wrap justify-between">
+        <div class="w-full sm:w-auto sm:text-left">
+          Copyright © 2025 JS Portfolio. All Rights Reserved.
+        </div>
+        <div class="w-full sm:w-auto sm:text-left">
+          Made by JS.
+        </div>
+      </div>
+  </div>
 </footer>
 
 <!-- script tags -->
