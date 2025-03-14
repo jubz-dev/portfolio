@@ -47,6 +47,7 @@
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-spin: spin 1s linear infinite;
     --animate-bounce: bounce 1s infinite;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -742,6 +743,9 @@
   }
   .animate-none {
     animation: none;
+  }
+  .animate-spin {
+    animation: var(--animate-spin);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -1568,6 +1572,9 @@
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
+  .pl-1 {
+    padding-left: calc(var(--spacing) * 1);
+  }
   .text-center {
     text-align: center;
   }
@@ -2184,6 +2191,9 @@
   }
   .\[animation-delay\:-0\.15s\] {
     animation-delay: -0.15s;
+  }
+  .\[hostname\:port\] {
+    hostname: port;
   }
   .\[keywords\:node-addon-api\] {
     keywords: node-addon-api;
@@ -2865,6 +2875,11 @@ header {
 @property --tw-contain-style {
   syntax: "*";
   inherits: false;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 @keyframes bounce {
   0%, 100% {

@@ -1,3 +1,8 @@
+<?php
+// require 'vendor/autoload.php';
+// require_once('src/mailerClass/PHPMailerAutoload.php');
+// require_once('src/app/contactMessage.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -147,11 +152,11 @@
       Looking forward to hearing from you!
     </p>
   </div>
-  <form>
+  <form id="contactForm" method="POST">
     <div class="container mx-auto">
       <div class="mx-auto md:w-2/3">
         <!-- success message -->
-        <div class="mb-7 p-4 border-l-4 border-primary -6 rounded border-green-800; bg-green-800 bg-opacity-40">
+        <div id="successMessage" class="mb-7 p-4 border-l-4 border-primary -6 rounded border-green-800; bg-green-800 bg-opacity-40 hidden">
           <div class="flex">
             <div class="flex-shrink-0">
               <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -166,7 +171,7 @@
           </div>
         </div>
         <!-- failed message -->
-        <div class="mb-7 p-4 border-l-4 border-red-500 -6 rounded border-gray-700 bg-white bg-opacity-40">
+        <div id="failedMessage" class="mb-7 p-4 border-l-4 border-red-500 -6 rounded border-gray-700 bg-white bg-opacity-40 hidden">
           <div class="flex">
             <div class="flex-shrink-0">
               <svg viewBox="0 0 24 24" class="w-5 h-5 text-red-500 stroke-current" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -213,7 +218,8 @@
               </div>
             </div>
             <div class="w-full p-2">
-              <button class="w-full flex items-center justify-center px-8 py-3 border border-transparent font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10 cursor-pointer"><i class="bx bxs-paper-plane text-3xl pr-1"></i>Send</button>
+              <button type="submit" id="sendButton" class="w-full flex items-center justify-center px-8 py-3 border border-transparent font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10 cursor-pointer" name="submit"><i class="bx bxs-paper-plane text-3xl"></i><span class="pl-1">Send</span></button>
+              <!-- <button class="w-full flex items-center justify-center px-8 py-3 border border-transparent font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10 cursor-pointer" name="submit"><i class="bx bx-loader-alt text-3xl animate-spin"></i><span class="pl-1">Processing...<span></button> -->
             </div>
         </div>
       </div>
@@ -274,6 +280,7 @@
 </footer>
 
 <!-- script tags -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="src/app.js"></script>
 </body>
 </html>

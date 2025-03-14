@@ -151,3 +151,56 @@ function updateActiveNav() {
 document.addEventListener("DOMContentLoaded", updateActiveNav);
 
 window.addEventListener("scroll", updateActiveNav);
+
+// Message sending form
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const sendButton = document.querySelector('button[name="submit"]');
+    sendButton.innerHTML = `
+        <i class="bx bx-loader-alt text-3xl animate-spin"></i>
+        <span class="pl-1">Processing...</span>
+    `;
+    
+    const formData = new FormData(form);
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    const jsonData = JSON.stringify(data);
+
+    fetch('/src/app/contactMessage.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: jsonData
+    })
+    .then(response => response.json())
+    .then(data => {
+        setTimeout(() => {
+            sendButton.innerHTML = `
+                <i class="bx bxs-paper-plane text-3xl"></i>
+                <span class="pl-1">Send</span>
+            `;
+
+            if (data.status === 'success') {
+                document.getElementById("successMessage").classList.remove("hidden");
+                form.reset();
+            } else {
+                document.getElementById("failedMessage").classList.remove("hidden");
+            }
+        }, 1000);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        sendButton.innerHTML = `
+            <i class="bx bxs-paper-plane text-3xl"></i>
+            <span class="pl-1">Send</span>
+        `;
+        document.getElementById("failedMessage").classList.remove("hidden");
+    });
+});
