@@ -228,7 +228,7 @@
         <div class="my-4 w-full md:w-1/3">
           <a href="/" class="text-white font-bold font-medium text-lg flex items-center gap-3"><div data-initials="JS">PORTFOLIO</div></a>
           <h1 class="font-bold text-2xl tracking-[3.22px] py-2">Jubail Salamida</h1>
-          <p class="text-1xl">
+          <p class="text-1xl mb-2">
               Back-End Software Engineer
           </p>
         </div>
@@ -248,13 +248,13 @@
             <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-secondary">Connect With Me</h2>
           </div>
 
-          <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" target="_blank" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full mr-1">
+          <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" target="_blank" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full mt-2 mr-1">
             <i class="bx bxl-linkedin text-2xl p-2"></i>
           </a>
-          <a href="tel:+639953389390" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full mr-1">
+          <a href="tel:+639953389390" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full mt-2 mr-1">
             <i class="bx bx-mobile text-2xl p-2"></i>
           </a>
-          <a href="mailto:rjmsalamida@gmail.com" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full">
+          <a href="mailto:rjmsalamida@gmail.com" class="inline-flex items-center justify-center border border-slate-300 text-slate-300 hover:border-primary hover:text-primary rounded-full mt-2">
             <i class="bx bx-envelope text-2xl p-2"></i>
           </a>
         </div>
@@ -270,6 +270,7 @@
         </div>
       </div>
   </div>
+  <div class="h-15 md:hidden"></div>
 </footer>
 
 <!-- script tags -->
