@@ -1,7 +1,10 @@
 <?php
-// require 'vendor/autoload.php';
-// require_once('src/mailerClass/PHPMailerAutoload.php');
-// require_once('src/app/contactMessage.php');
+session_start();
+
+// Generate CSRF token if not set
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -153,6 +156,7 @@
     </p>
   </div>
   <form id="contactForm" method="POST">
+    <input type="hidden" name="csrfToken" value="<?php echo $_SESSION['csrf_token']; ?>">
     <div class="container mx-auto">
       <div class="mx-auto md:w-2/3">
         <!-- success message -->

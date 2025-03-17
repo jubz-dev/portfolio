@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require '../../vendor/autoload.php';
 require_once('../mailerClass/PHPMailerAutoload.php');
 
@@ -19,9 +21,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input = json_decode(file_get_contents('php://input'), true);
 
     // Validate the input data
-    $name = $input['name'] ?? null;
-    $email = $input['email'] ?? null;
-    $message = $input['message'] ?? null;
+    $csrfToken = $input['csrfToken'] ?? null;
+
+    // Check if CSRF token is valid
+    if (!isset($csrfToken) || $csrfToken !== $_SESSION['csrf_token']) {
+        echo json_encode([
+            'status' => 'failed',
+            'message' => 'CSRF token validation failed.'
+        ]);
+        exit;
+    }
+
+    // Validate the input data
+    $name = isset($input['name']) ? trim(htmlspecialchars($input['name'], ENT_QUOTES, 'UTF-8')) : null;
+    $email = isset($input['email']) ? filter_var(trim($input['email']), FILTER_SANITIZE_EMAIL) : null;
+    $message = isset($input['message']) ? trim(htmlspecialchars($input['message'], ENT_QUOTES, 'UTF-8')) : null;
+
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo json_encode([
+            'status' => 'failed',
+            'message' => 'Invalid email address!'
+        ]);
+        exit;
+    }
+
+    // Prevent Email Header Injection
+    $email = str_replace(["\r", "\n"], '', $email);
+    $name = str_replace(["\r", "\n"], '', $name);
 
     if (!$name || !$email || !$message) {
         // Send an error response if any of the required fields are missing

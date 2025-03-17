@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         entry.target.classList.remove("h-0", "opacity-0", "scale-95");
         entry.target.classList.add("h-auto", "opacity-100", "scale-100");
-        console.log(entry.target);
+        // console.log(entry.target);
         loadImage(entry.target);
         observer.unobserve(entry.target);
       }
@@ -175,15 +175,26 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const sendButton = document.querySelector('button[name="submit"]');
+    const successMessage = document.getElementById("successMessage");
+    const failedMessage = document.getElementById("failedMessage");
+
     sendButton.innerHTML = `
-        <i class="bx bx-loader-alt text-3xl animate-spin"></i>
-        <span class="pl-1">Processing...</span>
+      <i class="bx bx-loader-alt text-3xl animate-spin"></i>
+      <span class="pl-1">Processing...</span>
     `;
+
+    if (!successMessage.classList.contains("hidden")) {
+      successMessage.classList.add("hidden");
+    }
+
+    if (!failedMessage.classList.contains("hidden")) {
+      failedMessage.classList.add("hidden");
+    }
     
     const formData = new FormData(form);
     const data = {};
     formData.forEach((value, key) => {
-        data[key] = value;
+      data[key] = value;
     });
 
     const jsonData = JSON.stringify(data);
@@ -204,10 +215,10 @@ form.addEventListener('submit', function(event) {
             `;
 
             if (data.status === 'success') {
-                document.getElementById("successMessage").classList.remove("hidden");
-                form.reset();
+              successMessage.classList.remove("hidden");
+              form.reset();
             } else {
-                document.getElementById("failedMessage").classList.remove("hidden");
+              failedMessage.classList.remove("hidden");
             }
         }, 1000);
     })
@@ -217,6 +228,6 @@ form.addEventListener('submit', function(event) {
             <i class="bx bxs-paper-plane text-3xl"></i>
             <span class="pl-1">Send</span>
         `;
-        document.getElementById("failedMessage").classList.remove("hidden");
+        failedMessage.classList.remove("hidden");
     });
 });
