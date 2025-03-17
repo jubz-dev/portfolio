@@ -93,29 +93,29 @@
     </div>
     <!-- skills cards -->
     <div class="my-6 grid-cols-2 gap-8 grid lg:grid-cols-4 lg:gap-12 md:grid-cols-4 md:gap-12 justify-around items-center">
-        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="php-container">
-          <img src="src/icons/skills/php.png" alt="Default" class="w-[196px] mx-auto hidden grayscale hover:grayscale-0 transition duration-300" id="php-default"/>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 overflow-hidden transition-all duration-700" id="php-container">
+          <img src="src/icons/skills/php.png" alt="Default" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="php-default"/>
         </div>
-        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="sql-container">
-          <img src="src/icons/skills/sql.png" alt="Default" class="w-[196px] mx-auto hidden grayscale hover:grayscale-0 transition duration-300" id="sql-default"/>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 overflow-hidden transition-all duration-700" id="sql-container">
+          <img src="src/icons/skills/sql.png" alt="Default" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="sql-default"/>
         </div>
-        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="redis-container">
-          <img src="src/icons/skills/redis.png" alt="Default" class="w-[196px] mx-auto hidden grayscale hover:grayscale-0 transition duration-300" id="redis-default"/>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 overflow-hidden transition-all duration-700" id="redis-container">
+          <img src="src/icons/skills/redis.png" alt="Default" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="redis-default"/>
         </div>
-        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="git-container">
-            <img src="src/icons/skills/git.png" alt="Default" class="w-[196px] mx-auto hidden grayscale hover:grayscale-0 transition duration-300" id="git-default"/>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 transition-all duration-700" id="git-container">
+            <img src="src/icons/skills/git.png" alt="Default" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="git-default"/>
         </div>
-        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="wordpress-container">
-            <img src="src/icons/skills/wordpress.png" alt="" class="w-[196px] mx-auto hidden grayscale hover:grayscale-0 transition duration-300" id="wordpress-default"/>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 transition-all duration-700" id="wordpress-container">
+            <img src="src/icons/skills/wordpress.png" alt="" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="wordpress-default"/>
         </div>
-        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="html5-container">
-            <img src="src/icons/skills/html5.png" alt="Default" class="w-[196px] mx-auto hidden grayscale hover:grayscale-0 transition duration-300" id="html5-default"/>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 overflow-hidden transition-all duration-700" id="html5-container">
+            <img src="src/icons/skills/html5.png" alt="Default" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="html5-default"/>
         </div>
-        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="css3-container">
-            <img src="src/icons/skills/css3.png" alt="Default" class="w-[196px] mx-auto hidden grayscale hover:grayscale-0 transition duration-300" id="css3-default"/>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 overflow-hidden transition-all duration-700" id="css3-container">
+            <img src="src/icons/skills/css3.png" alt="Default" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="css3-default"/>
         </div>
-        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center h-0 opacity-0 scale-95 overflow-hidden transition-all duration-700" id="javascript-container">
-            <img src="src/icons/skills/javascript.png" alt="Default" class="w-[196px] mx-auto hidden grayscale hover:grayscale-0 transition duration-300" id="javascript-default"/>
+        <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 overflow-hidden transition-all duration-700" id="javascript-container">
+            <img src="src/icons/skills/javascript.png" alt="Default" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="javascript-default"/>
         </div>
     </div>
 </section>

@@ -86,12 +86,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    setTimeout(() => {
-      loader.remove();
-      image.classList.remove("hidden");
-      container.style.height = "auto";
-      container.style.pointerEvents = "auto";
-    }, 1000);
+    let isFocused = false;
+    let focusTimeout;
+
+    const visibilityObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!isFocused) {
+            isFocused = true;
+            focusTimeout = setTimeout(() => {
+              loader.remove();
+              image.classList.remove("hidden");
+              container.style.pointerEvents = "auto";
+              visibilityObserver.disconnect();
+            }, 400);
+          }
+        } else {
+          isFocused = false;
+          clearTimeout(focusTimeout);
+        }
+      });
+    }, { threshold: 1.0 });
+    visibilityObserver.observe(container);
   }
 });
 
