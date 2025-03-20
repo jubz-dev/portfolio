@@ -7,7 +7,7 @@ require_once('../mailerClass/PHPMailerAutoload.php');
 use Dotenv\Dotenv;
 
 // Load environment variables
-$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv::createImmutable(dirname(__DIR__, 2));
 $dotenv->load();
 
 // Set the response header to JSON
