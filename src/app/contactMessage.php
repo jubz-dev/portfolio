@@ -1,14 +1,8 @@
 <?php
 session_start();
 
-require '../../vendor/autoload.php';
+require_once('../../config.php');
 require_once('../mailerClass/PHPMailerAutoload.php');
-
-use Dotenv\Dotenv;
-
-// Load environment variables
-$dotenv = Dotenv::createImmutable(dirname(__DIR__, 2));
-$dotenv->load();
 
 // Set the response header to JSON
 header('Content-Type: application/json');
@@ -86,31 +80,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Debugoutput = 'html';
 
         //Set the hostname of the mail server
-        $mail->Host = $_ENV['SMTP_HOST'];
+        $mail->Host = $_ENV['MAIL_HOST'];
 
         //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-        $mail->Port = $_ENV['SMTP_PORT'];
+        $mail->Port = $_ENV['MAIL_PORT'];
 
         //Set the encryption system to use - ssl (deprecated) or tls
-        $mail->SMTPSecure = $_ENV['SMTP_ENCRYPTION'];
+        $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
 
         //Whether to use SMTP authentication
-        $mail->SMTPAuth = $_ENV['SMTP_AUTH'] === 'true';
+        $mail->SMTPAuth = $_ENV['MAIL_AUTH'] === 'true';
 
         //Username to use for SMTP authentication - use full email address for gmail
-        $mail->Username = $_ENV['SMTP_USERNAME'];
+        $mail->Username = $_ENV['MAIL_USERNAME'];
 
         //Password to use for SMTP authentication
-        $mail->Password = $_ENV['SMTP_PASSWORD'];
+        $mail->Password = $_ENV['MAIL_PASSWORD'];
 
         //Set who the message is to be sent from
-        $mail->setFrom('gathfra2021@gmail.com', 'RJMSALAMIDA');
+        $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
 
         //Set an alternative reply-to address
         // $mail->addReplyTo('replyto@example.com', 'First Last');
 
         //Set who the message is to be sent to
-        $mail->addAddress('rjmsalamida@gmail.com', $name);
+        $mail->addAddress($_ENV['MAIL_TO_ADDRESS'], $name);
 
         //Set the subject line
         $mail->Subject = 'New Message (rjmsalamida site) - From ' . $name;
