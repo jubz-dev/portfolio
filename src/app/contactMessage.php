@@ -67,59 +67,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         )
         );
 
-            //Tell PHPMailer to use SMTP
+        // Tell PHPMailer to use SMTP
         $mail->isSMTP();
 
-        //Enable SMTP debugging
+        // Enable SMTP debugging
         // 0 = off (for production use)
         // 1 = client messages
         // 2 = client and server messages
         $mail->SMTPDebug = 0;
 
-        //Ask for HTML-friendly debug output
+        // Ask for HTML-friendly debug output
         $mail->Debugoutput = 'html';
 
-        //Set the hostname of the mail server
+        // Set the hostname of the mail server
         $mail->Host = $_ENV['MAIL_HOST'];
 
-        //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
+        // Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
         $mail->Port = $_ENV['MAIL_PORT'];
 
-        //Set the encryption system to use - ssl (deprecated) or tls
+        // Set the encryption system to use - ssl (deprecated) or tls
         $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
 
-        //Whether to use SMTP authentication
+        // Whether to use SMTP authentication
         $mail->SMTPAuth = $_ENV['MAIL_AUTH'] === 'true';
 
-        //Username to use for SMTP authentication - use full email address for gmail
+        // Username to use for SMTP authentication - use full email address for gmail
         $mail->Username = $_ENV['MAIL_USERNAME'];
 
-        //Password to use for SMTP authentication
+        // Password to use for SMTP authentication
         $mail->Password = $_ENV['MAIL_PASSWORD'];
 
-        //Set who the message is to be sent from
+        // Set who the message is to be sent from
         $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
 
-        //Set an alternative reply-to address
+        // Set an alternative reply-to address
         // $mail->addReplyTo('replyto@example.com', 'First Last');
 
-        //Set who the message is to be sent to
+        // Set who the message is to be sent to
         $mail->addAddress($_ENV['MAIL_TO_ADDRESS'], $name);
 
-        //Set the subject line
+        // Set the subject line
         $mail->Subject = 'New Message (rjmsalamida site) - From ' . $name;
 
-        //Read an HTML message body from an external file, convert referenced images to embedded,
-        //convert HTML into a basic plain-text alternative body
-        //$mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
+        // Read an HTML message body from an external file, convert referenced images to embedded,
+        // convert HTML into a basic plain-text alternative body
+        // $mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
 
         $mail->Body = "<b>Message Info</b><br>Full Name: ".$name."<br> Email : ".$email." <br> Message:<br> ".$message;
 
-        //Replace the plain text body with one created manually
+        // Replace the plain text body with one created manually
         $mail->AltBody = 'This is a plain-text message body';
         $mail->isHTML(true);
-        //Attach an image file
-        //$mail->addAttachment('images/phpmailer_mini.png');
+        // Attach an image file
+        // $mail->addAttachment('images/phpmailer_mini.png');
 
         // Send the email
         if ($mail->send()) {
