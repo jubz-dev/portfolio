@@ -160,14 +160,12 @@ if (!isset($_SESSION['csrf_token'])) {
     <div class="container mx-auto">
       <div class="mx-auto md:w-2/3">
         <!-- success message -->
-        <div id="successMessage" class="mb-7 p-4 border-l-4 border-primary -6 rounded border-green-800; bg-green-800 bg-opacity-40 hidden">
+        <div id="successMessage" class="mb-7 px-4 py-2 border-l-4 border-primary -6 rounded border-green-800; bg-green-800 bg-opacity-40 hidden">
           <div class="flex">
-            <div class="flex-shrink-0">
-              <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
+            <div class="flex items-center justify-center">
+              <i class="bx bxs-like text-4xl text-primary"></i>
             </div>
-            <div class="ml-3">
+            <div class="ml-3 flex items-center justify-center">
               <div class="text-sm text-primary">
                 <p>Your message has been sent successfully!</p>
               </div>
@@ -175,15 +173,12 @@ if (!isset($_SESSION['csrf_token'])) {
           </div>
         </div>
         <!-- failed message -->
-        <div id="failedMessage" class="mb-7 p-4 border-l-4 border-red-500 -6 rounded border-gray-700 bg-white bg-opacity-40 hidden">
+        <div id="failedMessage" class="mb-7 px-4 py-2 border-l-4 border-red-500 -6 rounded border-gray-700 bg-white bg-opacity-40 hidden">
           <div class="flex">
-            <div class="flex-shrink-0">
-              <svg viewBox="0 0 24 24" class="w-5 h-5 text-red-500 stroke-current" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 8V12V8ZM12 16H12.01H12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
+            <div class="flex items-center justify-center">
+              <i class="bx bxs-error-circle text-4xl text-red-500"></i>
             </div>
-            <div class="ml-3">
+            <div class="ml-3 flex items-center justify-center">
               <div class="text-sm text-red-500">
                 <p>Failed to send your message. Please try again later.</p>
               </div>
