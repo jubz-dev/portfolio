@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $csrfToken = $input['csrfToken'] ?? null;
 
     // Check if CSRF token is valid
-    if (!isset($csrfToken) || $csrfToken !== $_SESSION['csrf_token']) {
+    if (!isset($csrfToken) || $csrfToken !== $_SESSION['csrfToken']) {
         echo json_encode([
             'status' => 'failed',
             'message' => 'CSRF token validation failed.'

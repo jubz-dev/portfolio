@@ -2,7 +2,15 @@
 @import "tailwindcss";
 
 header{
-    z-index: 10001 !important;
+  z-index: 10001 !important;
+}
+
+#toastMessageSuccess, #toastMessageError {
+  z-index: 10002 !important;
+}
+
+#modal {
+  z-index: 10003 !important;
 }
 
 @theme {

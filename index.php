@@ -3,7 +3,7 @@ session_start();
 
 // Generate CSRF token if not set
 if (!isset($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    $_SESSION['csrfToken'] = bin2hex(random_bytes(32));
 }
 ?>
 <!DOCTYPE html>
@@ -136,9 +136,9 @@ if (!isset($_SESSION['csrf_token'])) {
                 <span class="block bg-primary bg-clip-text text-transparent">Grab my resume here</span>
             </h2>
             <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-                <a href="/src/app/download.php"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10"><i class="bx bxs-download text-3xl pr-1 animate-bounce"></i>Download
-                </a>
+                <div id="openModal"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10 cursor-pointer"><i class="bx bxs-download text-3xl pr-1 animate-bounce"></i>Download
+                </div>
             </div>
         </div>
     </div>
@@ -156,7 +156,7 @@ if (!isset($_SESSION['csrf_token'])) {
     </p>
   </div>
   <form id="contactForm" method="POST">
-    <input type="hidden" name="csrfToken" value="<?php echo $_SESSION['csrf_token']; ?>">
+    <input type="hidden" name="csrfToken" value="<?php echo $_SESSION['csrfToken']; ?>">
     <div class="container mx-auto">
       <div class="mx-auto md:w-2/3">
         <!-- success message -->
@@ -230,6 +230,66 @@ if (!isset($_SESSION['csrf_token'])) {
     </div>
   </form>
 </section>
+
+<!-- Modal pop-up -->
+<div id="modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+  <div class="fixed inset-0 bg-black/75"></div>
+  <div class="relative w-full max-w-md p-6 bg-background rounded-lg shadow-xl border border-primary shadow-green-400/30">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-lg font-semibold text-white">Continue to download</h3>
+      <button id="closeModalIcon" class="text-gray-400 hover:text-gray-200 cursor-pointer">
+        <i class="bx bx-x text-3xl"></i>
+      </button>
+    </div>
+
+    <div class="space-y-4">
+      <span class="text-md font-medium text-gray-300">Enter your email address to proceed.</span>
+      <form id="DownloadForm" method="POST">
+        <input type="hidden" name="csrfToken" value="<?php echo $_SESSION['csrfToken']; ?>">
+        <div class="py-4">
+          <div class="relative">
+              <input type="email" id="email" name="email"
+                class="peer w-full rounded border border-primary bg-background bg-opacity-40 py-3 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-primary-500 focus:bg-background focus:ring-2 focus:ring-primary-900" 
+                placeholder="Email" required />
+              <label for="email"
+                class="absolute left-3 -top-4 pt-1 px-2 bg-background text-sm leading-6 text-primary transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:pl-[0] peer-placeholder-shown:top-3 peer-placeholder-shown:bg-background peer-placeholder-shown:text-white peer-focus:pl-[9px] peer-focus:left-3 peer-focus:-top-4 peer-focus:text-sm peer-focus:px-2 peer-focus:bg-background peer-focus:text-white inline-block">
+                Email
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end gap-3">
+            <button id="submitUrlButton" class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary md:py-4 md:text-lg md:px-10 cursor-pointer">
+              Download<i class="bx bx-right-arrow-alt text-3xl pl-1"></i>
+            </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Message -->
+<div id="toastMessageSuccess" class="hidden fixed top-24 right-4 max-w-xs w-full bg-green-500 text-white shadow-lg rounded-lg p-4 flex items-center space-x-3 transition-transform transform hover:scale-105">
+    <i class="bx bxs-like text-4xl"></i>
+    <div class="flex-1">
+        <p class="font-bold">Success</p>
+        <p class="text-sm">Thank you for downloading!</p>
+    </div>
+    <button class="toast-close text-white hover:text-gray-300 focus:outline-none cursor-pointer">
+      <i class="bx bx-x text-2xl"></i>
+    </button>
+</div>
+
+<div id="toastMessageError" class="hidden fixed top-24 right-4 max-w-xs w-full bg-red-500 text-white shadow-lg rounded-lg p-4 flex items-center space-x-3 transition-transform transform hover:scale-105">
+  <i class="bx bxs-error-circle text-4xl"></i>
+  <div class="flex-1">
+      <p class="font-bold">Error</p>
+      <p class="text-sm">An error occurred. Please try again.</p>
+  </div>
+  <button class="toast-close text-white hover:text-gray-300 focus:outline-none cursor-pointer">
+    <i class="bx bx-x text-2xl"></i>
+  </button>
+</div>
 
 <!-- footer -->
 <footer>
