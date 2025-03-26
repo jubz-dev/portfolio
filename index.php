@@ -15,7 +15,7 @@ if (!isset($_SESSION['csrf_token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="./src/icons/logo.png">
     <link rel='stylesheet' type='text/css' media='screen' href='./src/output.css'>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 </head>
 <body class="bg-background overflow-x-hidden font-poppins">
 <!-- header -->
