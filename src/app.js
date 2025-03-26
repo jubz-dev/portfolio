@@ -358,5 +358,15 @@ document.getElementById("DownloadForm").addEventListener("submit", function (eve
   }
 });
 
-
-
+// Tracking site
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("/src/app/proxy.php", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(response => response.json())
+  .then(data => console.log("Tracking Response:", data))
+  .catch(error => console.error("Tracking Error:", error));
+});
