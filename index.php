@@ -163,7 +163,7 @@ if (!isset($_SESSION['csrf_token'])) {
           </a>
         </div>
         <p class="text-justify text-white mt-3 leading-8">
-          This project Shop E-commerce is a full-featured e-commerce web application built using Laravel 12 for the backend and Vue 3 Composition API with Pinia for the frontend state management. It includes a responsive user interface for customers and a robust admin panel for managing the store.
+          Shop E-commerce is a fictional, full-featured e-commerce web application built using Laravel 12 for the backend and Vue 3 Composition API with Pinia for the frontend state management. It includes a responsive user interface for customers and a robust admin panel for managing the store.
         </p>
     </div>
     <div
