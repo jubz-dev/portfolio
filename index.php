@@ -27,6 +27,7 @@ if (!isset($_SESSION['csrf_token'])) {
           <div class="hidden md:flex space-x-10">
             <a href="#home" class="text-primary hover:text-gray-300">Home</a>
             <a href="#skills" class="text-white hover:text-gray-300">Skills</a>
+            <a href="#projects" class="text-white hover:text-gray-300">Projects</a>
             <a href="#resume" class="text-white hover:text-gray-300">Resume</a>
             <a href="#message" class="text-white hover:text-gray-300">Message</a>
           </div>
@@ -45,6 +46,7 @@ if (!isset($_SESSION['csrf_token'])) {
       <div id="mobile-menu" class="toggle hidden md:hidden p-5">
           <a href="#home" class="block text-white p-2 mt-3 hover:bg-green-800">Home</a>
           <a href="#skills" class="block text-white p-2 hover:bg-green-800">Skills</a>
+          <a href="#projects" class="block text-white p-2 hover:bg-green-800">Projects</a>
           <a href="#resume" class="block text-white p-2 hover:bg-green-800">Resume</a>
           <a href="#message" class="block text-white p-2 hover:bg-green-800">Message</a>
       </div>
@@ -65,7 +67,7 @@ if (!isset($_SESSION['csrf_token'])) {
           <p class="text-lg mb-9 md:w-3/4 text-justify leading-8">
             I am passionate about creating impactful web solutions using PHP, web development, and databases, building scalable systems that enhance user experience.
           </p>
-          <a href="#message"><button class="flex items-center justify-center px-10 py-4 border border-transparent font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer"><i class="bx bxs-chevrons-down text-3xl text-secondar pr-1"></i>Let's Talk</button></a>
+          <a href="#message"><button class="flex items-center justify-center px-10 py-4 border border-transparent font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer"><i class="bx bxs-chevrons-down text-3xl text-secondary pr-1"></i>Let's Talk</button></a>
           <div class="mt-9 mb-8 flex gap-4 items-center">
             <div class="flex space-x-3">
               <a href="https://www.linkedin.com/in/rudolfo-salamida-5835101a1/" target="_blank" class="inline-flex items-center justify-center border bg-secondary border-secondary hover:border-green-700 hover:bg-green-700 text-white rounded-full mr-2">
@@ -120,6 +122,72 @@ if (!isset($_SESSION['csrf_token'])) {
         <div class="w-full px-5 py-8 rounded-lg border border-primary shadow-green-400/30 cursor-pointer shadow-xl relative flex justify-center items-center opacity-0 scale-95 overflow-hidden transition-all duration-700" id="javascript-container">
             <img src="src/icons/skills/javascript.png" alt="Default" class="w-[196px] mx-auto grayscale hover:grayscale-0 transition duration-300" id="javascript-default"/>
         </div>
+    </div>
+</section>
+
+<!-- projects section -->
+<section class="px-5 my-32 mx-auto max-w-7xl" id="projects">
+    <div class="h-8 md:hidden"></div>
+    <div class="text-center text-white">
+      <h3 class="text-3xl font-bold mb-5">
+          Recent <span class="text-primary">Projects</span>
+      </h3>
+    </div>
+    <div
+    class="flex md:flex-row flex-col items-center justify-between gap-8 my-20"
+    >
+    <div
+        class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl md:w-[741px] md:h-96 mx-auto rounded-2xl p-5 md:p-0"
+    >
+        <img src="src/img/projects/project-1.png" alt="" class="p-5 w-full" />
+        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="shop.rjmsalamida.site">Shop E-Commerce</a></h5>
+        <div class="flex flex-wrap gap-3 mb-5">
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full pm-3">Laravel 12</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full pm-3">API Laravel</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vue 3 (Composition API)</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Pinia</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Stripe</span>
+        </div>
+        <div>
+          <a href="https://admin-shop.rjmsalamida.site" target="_blank">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+              <i class="bx bx-link"></i>Live Admin Panel
+            </div>
+          </a>
+          <a href="https://shop.rjmsalamida.site" target="_blank">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+              <i class="bx bx-link"></i>Live Shop
+            </div>
+          </a>
+        </div>
+        <p class="text-justify text-white mt-3 leading-8">
+          This project Shop E-commerce is a full-featured e-commerce web application built using Laravel 12 for the backend and Vue 3 Composition API with Pinia for the frontend state management. It includes a responsive user interface for customers and a robust admin panel for managing the store.
+        </p>
+    </div>
+    <div
+        class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl md:w-[741px] md:h-96 mx-auto rounded-2xl p-5 md:p-0"
+    >
+        <img src="src/img/projects/project-2.png" alt="" class="p-5 w-full" />
+        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="shop.rjmsalamida.site">My Portfolio</a></h5>
+        <div class="flex flex-wrap gap-3 mb-5">
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full pm-3">Vanilla PHP</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full pm-3">Vanilla Javascript</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Tailwind</span>
+        </div>
+        <div>
+          <a href="https://rjmsalamida.site" target="_blank">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+              <i class="bx bx-link"></i>Live Portfolio
+            </div>
+          </a>
+        </div>
+        <p class="text-justify text-white mt-3 leading-8">
+          This portfolio website showcases my skills and projects, features a downloadable resume, and includes a contact form for easy communication. It is built using Vanilla PHP for the backend, Vanilla JavaScript for dynamic frontend interactions, and Tailwind CSS for a clean, responsive design.
+        </p>
+    </div>
     </div>
 </section>
 
