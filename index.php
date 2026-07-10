@@ -2,7 +2,7 @@
 session_start();
 
 // Generate CSRF token if not set
-if (!isset($_SESSION['csrf_token'])) {
+if (!isset($_SESSION['csrfToken'])) {
     $_SESSION['csrfToken'] = bin2hex(random_bytes(32));
 }
 ?>
@@ -137,7 +137,7 @@ if (!isset($_SESSION['csrf_token'])) {
     class="flex md:flex-row flex-col items-center justify-between gap-8 my-20"
     >
     <div
-        class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl md:w-[741px] md:h-96 mx-auto rounded-2xl p-5 md:p-0"
+        class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl md:w-[741px] mx-auto rounded-2xl p-5 md:p-5"
     >
         <img src="src/img/projects/project-1.png" alt="" class="p-5 w-full" />
         <h5 class="text-center my-5 text-xl text-white mb-4"><a href="shop.rjmsalamida.site">Shop E-Commerce</a></h5>
@@ -167,7 +167,7 @@ if (!isset($_SESSION['csrf_token'])) {
         </p>
     </div>
     <div
-        class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl md:w-[741px] md:h-96 mx-auto rounded-2xl p-5 md:p-0"
+        class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl md:w-[741px] mx-auto rounded-2xl p-5 md:p-5"
     >
         <img src="src/img/projects/project-2.png" alt="" class="p-5 w-full" />
         <h5 class="text-center my-5 text-xl text-white mb-4"><a href="shop.rjmsalamida.site">My Portfolio</a></h5>
