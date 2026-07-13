@@ -21,6 +21,24 @@ header{
   --color-background: #141A1A;
 }
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid > .project-card-center {
+    grid-column: 1 / -1;
+    width: 50%;
+    margin-inline: auto;
+  }
+}
+
 [data-initials]:before {
   background: #2EF29E;
   color: #141A1A;

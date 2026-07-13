@@ -133,31 +133,25 @@ if (!isset($_SESSION['csrfToken'])) {
           Recent <span class="text-primary">Projects</span>
       </h3>
     </div>
-    <div
-    class="flex md:flex-row flex-col items-center justify-between gap-8 my-20"
-    >
-    <div
-        class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl md:w-[741px] mx-auto rounded-2xl p-5 md:p-5"
-    >
+    <div class="projects-grid my-20">
+    <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
         <img src="src/img/projects/project-1.png" alt="" class="p-5 w-full" />
-        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="shop.rjmsalamida.site">Shop E-Commerce</a></h5>
+        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://shop.rjmsalamida.site" target="_blank">Shop E-Commerce</a></h5>
         <div class="flex flex-wrap gap-3 mb-5">
-            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full pm-3">Laravel 12</span>
-            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full pm-3">API Laravel</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel 12</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">API Laravel</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vue 3 (Composition API)</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Pinia</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Stripe</span>
         </div>
-        <div>
+        <div class="flex flex-wrap gap-2 mb-3">
           <a href="https://admin-shop.rjmsalamida.site" target="_blank">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+            <div class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
               <i class="bx bx-link"></i>Live Admin Panel
             </div>
           </a>
           <a href="https://shop.rjmsalamida.site" target="_blank">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+            <div class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
               <i class="bx bx-link"></i>Live Shop
             </div>
           </a>
@@ -166,26 +160,45 @@ if (!isset($_SESSION['csrfToken'])) {
           Shop E-commerce is a fictional, full-featured e-commerce web application built using Laravel 12 for the backend and Vue 3 Composition API with Pinia for the frontend state management. It includes a responsive user interface for customers and a robust admin panel for managing the store.
         </p>
     </div>
-    <div
-        class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl md:w-[741px] mx-auto rounded-2xl p-5 md:p-5"
-    >
+    <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
         <img src="src/img/projects/project-2.png" alt="" class="p-5 w-full" />
-        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="shop.rjmsalamida.site">My Portfolio</a></h5>
+        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://rjmsalamida.site" target="_blank">My Portfolio</a></h5>
         <div class="flex flex-wrap gap-3 mb-5">
-            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full pm-3">Vanilla PHP</span>
-            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full pm-3">Vanilla Javascript</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vanilla PHP</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vanilla Javascript</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Tailwind</span>
         </div>
-        <div>
+        <div class="flex flex-wrap gap-2 mb-3">
           <a href="https://rjmsalamida.site" target="_blank">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+            <div class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
               <i class="bx bx-link"></i>Live Portfolio
             </div>
           </a>
         </div>
         <p class="text-justify text-white mt-3 leading-8">
           This portfolio website showcases my skills and projects, features a downloadable resume, and includes a contact form for easy communication. It is built using Vanilla PHP for the backend, Vanilla JavaScript for dynamic frontend interactions, and Tailwind CSS for a clean, responsive design.
+        </p>
+    </div>
+    <div class="project-card-center border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
+        <img src="src/img/projects/project-3.png" alt="Finflex" class="p-5 w-full" />
+        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://finflex.rjmsalamida.site/" target="_blank">Finflex</a></h5>
+        <div class="flex flex-wrap gap-3 mb-5">
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel 13</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel Sanctum</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Spatie Permission</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vue 3 (Composition API)</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Pinia</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Chart.js</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <a href="https://finflex.rjmsalamida.site/" target="_blank">
+            <div class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+              <i class="bx bx-link"></i>Live Finflex
+            </div>
+          </a>
+        </div>
+        <p class="text-justify text-white mt-3 leading-8">
+          Finflex is a personal finance management SPA for tracking income, expenses, budgets, savings goals, and wallets with interactive charts and monthly reports. Built with Laravel 13 RESTful API using Sanctum and Spatie Permission, Vue 3 Composition API, Pinia, Chart.js, and Tailwind CSS.
         </p>
     </div>
     </div>
