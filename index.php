@@ -189,6 +189,7 @@ if (!isset($_SESSION['csrfToken'])) {
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vue 3 (Composition API)</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Pinia</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Chart.js</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Tailwind CSS</span>
         </div>
         <div class="flex flex-wrap gap-2 mb-3">
           <a href="https://finflex.rjmsalamida.site/" target="_blank">
