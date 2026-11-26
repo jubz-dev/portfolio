@@ -62,10 +62,10 @@ if (!isset($_SESSION['csrfToken'])) {
           </p>
           <h1 class="font-bold text-4xl tracking-[3.22px] mb-5">Jubail Salamida</h1>
           <p class="text-2xl mb-5">
-            Back-End Software Engineer
+            Full Stack Software Engineer
           </p>
           <p class="text-lg mb-9 md:w-3/4 text-justify leading-8">
-            I am passionate about creating impactful web solutions using PHP, web development, and databases, building scalable systems that enhance user experience.
+            I am passionate about building scalable, secure, and user-friendly web applications using PHP, Laravel, Vue.js, React, and modern web technologies. I combine frontend and backend expertise to deliver reliable, high-performance solutions that enhance user experience and meet business needs.
           </p>
           <a href="#message"><button class="flex items-center justify-center px-10 py-4 border border-transparent font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer"><i class="bx bxs-chevrons-down text-3xl text-secondary pr-1"></i>Let's Talk</button></a>
           <div class="mt-9 mb-8 flex gap-4 items-center">
