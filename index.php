@@ -242,6 +242,32 @@ if (!isset($_SESSION['csrfToken'])) {
           CommerceHub is a full-stack e-commerce SPA with React 19 and Redux Toolkit for state management, and a Laravel 13 RESTful API secured with Sanctum. It features product browsing, cart management, Stripe checkout, user authentication, product reviews, coupons, and an admin dashboard.
         </p>
     </div>
+    <div class="project-card-center border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
+        <img src="src/img/projects/project-5.png" alt="Japan Travel Forecast" class="p-5 w-full" />
+        <h5 class="text-center my-5 text-xl text-white mb-2"><a href="https://japan-travel-forecast.rjmsalamida.site/" target="_blank">Japan Travel Forecast</a></h5>
+        <div class="flex justify-center mb-4">
+            <span class="text-xs font-medium text-primary border border-primary/40 rounded-full px-3 py-1">Demo Application</span>
+        </div>
+        <div class="flex flex-wrap gap-3 mb-5">
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vue 3</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vue Router</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel 12</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Leaflet</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Docker</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">OpenWeatherMap</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Geoapify</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <a href="https://japan-travel-forecast.rjmsalamida.site/" target="_blank">
+            <div class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+              <i class="bx bx-link"></i>Live Demo
+            </div>
+          </a>
+        </div>
+        <p class="text-justify text-white mt-3 leading-8">
+          Japan Travel Forecast is a full-stack travel companion app for tourists visiting Japan, displaying 5-day weather forecasts and an interactive Leaflet map of nearby attractions for 6 major cities. Built with Vue 3, Laravel 12, and Docker, integrating OpenWeatherMap and Geoapify APIs.
+        </p>
+    </div>
     </div>
 </section>
 
