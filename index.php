@@ -136,7 +136,10 @@ if (!isset($_SESSION['csrfToken'])) {
     <div class="projects-grid my-20">
     <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
         <img src="src/img/projects/project-1.png" alt="" class="p-5 w-full" />
-        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://shop.rjmsalamida.site" target="_blank">Shop E-Commerce</a></h5>
+        <h5 class="text-center my-5 text-xl text-white mb-2"><a href="https://shop.rjmsalamida.site" target="_blank">Shop E-Commerce</a></h5>
+        <div class="flex justify-center mb-4">
+            <span class="text-xs font-medium text-primary border border-primary/40 rounded-full px-3 py-1">Demo Application</span>
+        </div>
         <div class="flex flex-wrap gap-3 mb-5">
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel 12</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">API Laravel</span>
@@ -162,7 +165,10 @@ if (!isset($_SESSION['csrfToken'])) {
     </div>
     <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
         <img src="src/img/projects/project-2.png" alt="" class="p-5 w-full" />
-        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://rjmsalamida.site" target="_blank">My Portfolio</a></h5>
+        <h5 class="text-center my-5 text-xl text-white mb-2"><a href="https://rjmsalamida.site" target="_blank">My Portfolio</a></h5>
+        <div class="flex justify-center mb-4">
+            <span class="text-xs font-medium text-primary border border-primary/40 rounded-full px-3 py-1">Personal Project</span>
+        </div>
         <div class="flex flex-wrap gap-3 mb-5">
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vanilla PHP</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Vanilla Javascript</span>
@@ -181,7 +187,10 @@ if (!isset($_SESSION['csrfToken'])) {
     </div>
     <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
         <img src="src/img/projects/project-3.png" alt="Finflex" class="p-5 w-full" />
-        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://finflex.rjmsalamida.site/" target="_blank">Finflex</a></h5>
+        <h5 class="text-center my-5 text-xl text-white mb-2"><a href="https://finflex.rjmsalamida.site/" target="_blank">Finflex</a></h5>
+        <div class="flex justify-center mb-4">
+            <span class="text-xs font-medium text-primary border border-primary/40 rounded-full px-3 py-1">Personal Project</span>
+        </div>
         <div class="flex flex-wrap gap-3 mb-5">
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel 13</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel Sanctum</span>
@@ -204,7 +213,10 @@ if (!isset($_SESSION['csrfToken'])) {
     </div>
     <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
         <img src="src/img/projects/project-4.png" alt="CommerceHub" class="p-5 w-full" />
-        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://commercehub.rjmsalamida.site" target="_blank">CommerceHub</a></h5>
+        <h5 class="text-center my-5 text-xl text-white mb-2"><a href="https://commercehub.rjmsalamida.site" target="_blank">CommerceHub</a></h5>
+        <div class="flex justify-center mb-4">
+            <span class="text-xs font-medium text-primary border border-primary/40 rounded-full px-3 py-1">Demo Application</span>
+        </div>
         <div class="flex flex-wrap gap-3 mb-5">
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">React 19</span>
             <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Redux Toolkit</span>
