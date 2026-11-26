@@ -130,7 +130,7 @@ if (!isset($_SESSION['csrfToken'])) {
     <div class="h-8 md:hidden"></div>
     <div class="text-center text-white">
       <h3 class="text-3xl font-bold mb-5">
-          Recent <span class="text-primary">Projects</span>
+          Project <span class="text-primary">Showcase</span>
       </h3>
     </div>
     <div class="projects-grid my-20">
@@ -179,7 +179,7 @@ if (!isset($_SESSION['csrfToken'])) {
           This portfolio website showcases my skills and projects, features a downloadable resume, and includes a contact form for easy communication. It is built using Vanilla PHP for the backend, Vanilla JavaScript for dynamic frontend interactions, and Tailwind CSS for a clean, responsive design.
         </p>
     </div>
-    <div class="project-card-center border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
+    <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
         <img src="src/img/projects/project-3.png" alt="Finflex" class="p-5 w-full" />
         <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://finflex.rjmsalamida.site/" target="_blank">Finflex</a></h5>
         <div class="flex flex-wrap gap-3 mb-5">
@@ -200,6 +200,34 @@ if (!isset($_SESSION['csrfToken'])) {
         </div>
         <p class="text-justify text-white mt-3 leading-8">
           Finflex is a personal finance management SPA for tracking income, expenses, budgets, savings goals, and wallets with interactive charts and monthly reports. Built with Laravel 13 RESTful API using Sanctum and Spatie Permission, Vue 3 Composition API, Pinia, Chart.js, and Tailwind CSS.
+        </p>
+    </div>
+    <div class="border border-primary shadow-xl shadow-green-400/30 rounded-2xl w-full p-5">
+        <img src="src/img/projects/project-4.png" alt="CommerceHub" class="p-5 w-full" />
+        <h5 class="text-center my-5 text-xl text-white mb-4"><a href="https://commercehub.rjmsalamida.site" target="_blank">CommerceHub</a></h5>
+        <div class="flex flex-wrap gap-3 mb-5">
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">React 19</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Redux Toolkit</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">React Router 7</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel 13</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Laravel Sanctum</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Tailwind CSS 4</span>
+            <span class="inline-block bg-green-250 text-sm px-3 py-1 rounded-full">Stripe</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <a href="https://admin-commercehub.rjmsalamida.site/" target="_blank">
+            <div class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+              <i class="bx bx-link"></i>Live Admin Panel
+            </div>
+          </a>
+          <a href="https://commercehub.rjmsalamida.site" target="_blank">
+            <div class="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-secondary bg-green-250 hover:bg-primary cursor-pointer">
+              <i class="bx bx-link"></i>Live CommerceHub
+            </div>
+          </a>
+        </div>
+        <p class="text-justify text-white mt-3 leading-8">
+          CommerceHub is a full-stack e-commerce SPA with React 19 and Redux Toolkit for state management, and a Laravel 13 RESTful API secured with Sanctum. It features product browsing, cart management, Stripe checkout, user authentication, product reviews, coupons, and an admin dashboard.
         </p>
     </div>
     </div>
